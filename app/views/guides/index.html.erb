@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Employees</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Full Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guides.each do |guide| %>
+      <tr>
+        <td><%= guide.title %></td>
+        <td><%= link_to 'Show', guide %></td>
+        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
+        <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employee', new_guide_path,class:"btn btn-secondary"  %>

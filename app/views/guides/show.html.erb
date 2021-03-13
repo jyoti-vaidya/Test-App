@@ -1,0 +1,11 @@
+<div class="jumbotron">
+    <h1 class="display-4">
+    <%= @guide.title %>
+  </h1>
+  <br/>
+<br/>
+
+<%= link_to 'Edit', edit_guide_path(@guide), class:"btn btn-secondary" %> |
+<%= link_to 'Delete', @guide, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %> |
+<%= link_to 'Back', guides_path, class:"btn btn-dark" %>
+</div>
